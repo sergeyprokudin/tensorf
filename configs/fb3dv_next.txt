@@ -1,7 +1,7 @@
 
 dataset_name = llff
 datadir = ./data/content/coffee_martini_perframe/0002
-expname =  tensorf_fb3dv_VM
+expname =  tensorf_fb3dv_VM_next
 basedir = ./log
 
 downsample_train = 4.0
