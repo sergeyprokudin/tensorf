@@ -197,7 +197,7 @@ class LLFFDataset(Dataset):
 
         average_pose = average_poses(self.poses)
         dists = np.sum(np.square(average_pose[:3, 3] - self.poses[:, :3, 3]), -1)
-        i_test = np.arange(0, self.poses.shape[0], self.hold_every)  # [np.argmin(dists)]
+        i_test = np.asarray([0]) # np.arange(0, self.poses.shape[0], self.hold_every)  # [np.argmin(dists)]
         img_list = i_test if self.split != 'train' else list(set(np.arange(len(self.poses))) - set(i_test))
 
         # use first N_images-1 to train, the LAST is val
